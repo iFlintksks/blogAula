@@ -14,6 +14,7 @@ class Rota{
       require_once '../app/Controllers/'.$this->controlador.'.php';
       $this->controlador = new $this->controlador;
       if(isset($url[1])){
+         
          if(method_exists($this->controlador, $url[1])){
          $this->metodo = $url[1];
          unset($url[1]);
